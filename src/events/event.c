@@ -9,16 +9,7 @@
 #include "../psx/movie.h"
 #include "../psx/mutil.h"
 
-
-#include "../characters/benson/benson.h"
-
 Event event;
-
-static void Unemployed()
-{
-	if (stage.song_step == 250)
-		benson.angry = true;
-}
 
 void Events()
 {
@@ -26,8 +17,6 @@ void Events()
 	//FntPrint("steps: %d", stage.song_step);
 	if(stage.prefs.followcamera)
 		FollowCharCamera();
-	if (stage.stage_id == StageId_1_3)
-		Unemployed();
 }
 
 void FollowCharCamera()
@@ -73,7 +62,7 @@ void NoteHitEnemyEvent(u8 type)
 	{
 		stage.bump += FIXED_DEC(100,1000);
 	}
-	if (stage.stage_id == StageId_1_6)
+	if (false)
 		event.shake = 1000;
 }
 

@@ -99,7 +99,9 @@ static struct
 	} page_param;
 	
 	//Menu assets
-	Gfx_Tex tex_back, tex_ng, tex_story, tex_title;
+	IO_Data lordx_arc;
+	u8 backanim, backspeed;
+	Gfx_Tex tex_back, tex_ng, tex_story, tex_title, tex_lordx, tex_lordx2;
 	FontData font_bold, font_arial;
 	
 	Character *gf; //Title Girlfriend
@@ -231,6 +233,8 @@ void Menu_Load(MenuPage page)
 	Gfx_LoadTex(&menu.tex_title, Archive_Find(menu_arc, "title.tim"), 0);
 	Mem_Free(menu_arc);
 	
+	menu.lordx_arc = IO_Read("\\MENU\\LORDX.ARC;1");
+	
 	FontData_Load(&menu.font_bold, Font_Bold);
 	FontData_Load(&menu.font_arial, Font_Arial);
 	
@@ -270,6 +274,8 @@ void Menu_Unload(void)
 {
 	//Free title Girlfriend
 	Character_Free(menu.gf);
+	
+	Mem_Free(menu.lordx_arc);
 }
 
 void Menu_ToStage(StageId id, StageDiff diff, boolean story)
@@ -422,55 +428,37 @@ void Menu_Tick(void)
 			if ((stage.flag & STAGE_FLAG_JUST_STEP) && (stage.song_step & 0x3) == 0 && menu.page_state.title.logo_bump == 0)
 				menu.page_state.title.logo_bump = (FIXED_DEC(7,1) / 24) - 1;
 			
-			static const fixed_t logo_scales[] = {
-				FIXED_DEC(1,1),
-				FIXED_DEC(101,100),
-				FIXED_DEC(102,100),
-				FIXED_DEC(103,100),
-				FIXED_DEC(105,100),
-				FIXED_DEC(110,100),
-				FIXED_DEC(97,100),
-			};
-			fixed_t logo_scale = logo_scales[(menu.page_state.title.logo_bump * 24) >> FIXED_SHIFT];
-			u32 x_rad = (logo_scale * (255 >> 1)) >> FIXED_SHIFT;
-			u32 y_rad = (logo_scale * (151 >> 1)) >> FIXED_SHIFT;
-			
-			menu.animcounter += 4;
-			if (menu.animcounter > 250)
-				menu.animcounter -= 250;
-			
-			RECT logo_src = {0, 0, 255, 150};
-			RECT logo_dst = {
-				160 + (SCREEN_WIDEADD2 >> 1),
-				120,
-				x_rad << 1,
-				y_rad << 1
+			//Draw Background
+			static const char *back_files[] = {
+				"lordx0.tim",
+				"lordx1.tim",
+				"lordx2.tim",
+				"lordx3.tim",
 			};
 			
-			Gfx_DrawTexRotate(&menu.tex_title, &logo_src, &logo_dst, MUtil_Sin(menu.animcounter - 50) / 30, logo_dst.w / 2, logo_dst.h / 2);
+			Gfx_LoadTex(&menu.tex_lordx2, Archive_Find(menu.lordx_arc, back_files[3]), 0);
+			Gfx_LoadTex(&menu.tex_lordx, Archive_Find(menu.lordx_arc, back_files[menu.backanim]), 0);
+			RECT back_src = {0, 0, 256, 240};
+			RECT back_dst = {0, 0, 256, 240};
+			Gfx_DrawTex(&menu.tex_lordx, &back_src, &back_dst);
+			RECT back2_src = {64 * menu.backanim, 0, 64, 240};
+			RECT back2_dst = {255, 0, 64, 240};
+			Gfx_DrawTex(&menu.tex_lordx2, &back2_src, &back2_dst);
+			if(menu.backspeed > 0)
+				menu.backspeed--;
+			else
+			{
+				menu.backspeed = 2;
+				if(menu.backanim < 2)
+					menu.backanim++;
+				else
+					menu.backanim = 0;
+			}
 			
 			if (menu.page_state.title.logo_bump > 0)
 				if ((menu.page_state.title.logo_bump -= timer_dt) < 0)
 					menu.page_state.title.logo_bump = 0;
 			
-			//Draw "Press Start to Begin"
-			if (menu.next_page == menu.page)
-			{
-				//Blinking blue
-				s16 press_lerp = (MUtil_Cos(animf_count << 3) + 0x100) >> 1;
-				u8 press_r = 51 >> 1;
-				u8 press_g = (58  + ((press_lerp * (255 - 58))  >> 8)) >> 1;
-				u8 press_b = (206 + ((press_lerp * (255 - 206)) >> 8)) >> 1;
-				
-				RECT press_src = {0, 151, 207, 18};
-				Gfx_BlitTexCol(&menu.tex_title, &press_src, (SCREEN_WIDTH - 256) / 2, SCREEN_HEIGHT - 48, press_r, press_g, press_b);
-			}
-			else
-			{
-				//Flash white
-				RECT press_src = {0, (animf_count & 1) ? 151 : 169, 207, 18};
-				Gfx_BlitTex(&menu.tex_title, &press_src, (SCREEN_WIDTH - 256) / 2, SCREEN_HEIGHT - 48);
-			}
 			break;
 		}
 		case MenuPage_Main:
@@ -594,7 +582,7 @@ void Menu_Tick(void)
 				const char *name;
 				const char *tracks[3];
 			} menu_options[] = {
-				{NULL, StageId_1_4, "TUTORIAL", {"TUTORIAL", NULL, NULL}},
+				{NULL, StageId_1_3, "TUTORIAL", {"TUTORIAL", NULL, NULL}},
 				{"1", StageId_1_1, "DADDY DEAREST", {"BOPEEBO", "FRESH", "DADBATTLE"}}
 			};
 			
@@ -719,12 +707,16 @@ void Menu_Tick(void)
 				const char *text;
 			} menu_options[] = {
 				//{StageId_4_4, 0xFFFC96D7, "TEST"},
-				{StageId_1_1, 0xFF9271FD, "EXHILARATION"},
-				{StageId_1_2, 0xFF9271FD, "RECKLESS"},
-				{StageId_1_3, 0xFF9271FD, "UNEMPLOYED"},
-				{StageId_1_4, 0xFF9271FD, "SUPERCHARGE"},
-				{StageId_1_5, 0xFF9271FD, "TEMPER BREAK"},
-				{StageId_1_6, 0xFF9271FD, "NEW MANAGEMENT"}
+				{StageId_1_1, 0xFF9271FD, "WEAKLING"},
+				{StageId_1_2, 0xFF9271FD, "X"},
+				{StageId_1_3, 0xFF9271FD, "SLAVES"},
+				{StageId_2_1, 0xFF9271FD, "CYCLES"},
+				{StageId_2_2, 0xFF9271FD, "BROKEN"},
+				{StageId_2_3, 0xFF9271FD, "BOUNDLESS"},
+				{StageId_2_4, 0xFF9271FD, "CONSCIENCE"},
+				{StageId_2_5, 0xFF9271FD, "NIGHTMARE BEFORE CHRISTMAS"},
+				{StageId_2_6, 0xFF9271FD, "PETRIFYING PEPPERMINT"},
+				{StageId_2_7, 0xFF9271FD, "EXECUTION"}
 			};
 			
 			//Initialize page

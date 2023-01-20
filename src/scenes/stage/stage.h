@@ -30,17 +30,22 @@
 //Stage enums
 typedef enum
 {
-	StageId_1_1, //Bopeebo
-	StageId_1_2, //Fresh
-	StageId_1_3, //Dadbattle
-	StageId_1_4, //Tutorial
-	StageId_1_5, //Tutorial
-	StageId_1_6, //Tutorial
+	StageId_1_1,
+	StageId_1_2,
+	StageId_1_3,
+	
+	StageId_2_1,
+	StageId_2_2,
+	StageId_2_3,
+	StageId_2_4,
+	StageId_2_5,
+	StageId_2_6,
+	StageId_2_7,
 	
 	StageId_Max
 } StageId;
 
-#define StageId_LastVanilla StageId_1_4
+#define StageId_LastVanilla StageId_1_3
 
 typedef enum
 {

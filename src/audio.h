@@ -8,12 +8,11 @@ typedef enum
 {
 	XA_Menu,   //MENU.XA
 	
-	XA_Exhila,
-	XA_Reckle,
-	XA_Unempl,
-	XA_Superc,
-	XA_Temper,
-	XA_Bonus3,
+	XA_Songs1,
+	XA_Songs2,
+	XA_Songs3,
+	XA_Songs4,
+	XA_Songs5,
 	
 	XA_Max,
 } XA_File;
@@ -24,23 +23,20 @@ typedef enum
 	XA_GettinFreaky, //Gettin' Freaky
 	XA_GameOver,     //Game Over
 
-	XA_Exhilaration,
-	XA_ExhilarationErect,
+	XA_Weakling,
+	XA_X,
 	
-	XA_Reckless,
-	XA_RecklessErect,
+	XA_Slaves,
+	XA_Cycles,
 	
-	XA_Unemployed,
-	XA_UnemployedErect,
+	XA_Broken,
+	XA_Boundless,
 	
-	XA_Supercharge,
-	XA_SuperchargeErect,
-	
-	XA_Temper_Break,
-	XA_Temper_BreakErect,
-	
-	XA_Cookies,
-	XA_New_Management,
+	XA_Conscience,
+	XA_NBC,
+
+	XA_PP,
+	XA_Execution,
 	
 	XA_TrackMax,
 } XA_Track;

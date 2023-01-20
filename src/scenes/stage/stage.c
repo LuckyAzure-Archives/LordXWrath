@@ -1,25 +1,15 @@
 //Characters
 //Players
 #include "../../characters/bf/bf.h"
-#include "../../characters/bfa/bfa.h"
 
 //Opponents
 #include "../../characters/dad/dad.h"
-#include "../../characters/morde/morde.h"
-#include "../../characters/mordee/mordee.h"
-#include "../../characters/rigby/rigby.h"
-#include "../../characters/benson/benson.h"
-#include "../../characters/bensona/bensona.h"
-#include "../../characters/bensonp/bensonp.h"
 
 //Stages
 #include "../../stages/default/default.h"
-#include "../../stages/house/house.h"
-#include "../../stages/park/park.h"
 
 //Middle Char (Girlfriend)
 #include "../../characters/gf/gf.h"
-#include "../../characters/gfa/gfa.h"
 
 //Stage Codes
 #include "stage.h"

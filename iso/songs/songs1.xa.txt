@@ -1,0 +1,4 @@
+1 xa weakling/Merged.xa 1 0
+1 xa weakling/Inst.xa 1 1
+1 xa x/Merged.xa 1 2
+1 xa x/Inst.xa 1 3
