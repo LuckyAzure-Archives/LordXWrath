@@ -11,9 +11,19 @@
 			"hname"   : "Left"
 		},
 		{
+			"fnfanim" : "singLEFTmiss",
+			"imgname" : "leftmiss",
+			"hname"   : "Leftmiss"
+		},
+		{
 			"fnfanim" : "singDOWN",
 			"imgname" : "down",
 			"hname"   : "Down"
+		},
+		{
+			"fnfanim" : "singDOWNmiss",
+			"imgname" : "downmiss",
+			"hname"   : "Downmiss"
 		},
 		{
 			"fnfanim" : "singUP",
@@ -21,24 +31,33 @@
 			"hname"   : "Up"
 		},
 		{
+			"fnfanim" : "singUPmiss",
+			"imgname" : "upmiss",
+			"hname"   : "Upmiss"
+		},
+		{
 			"fnfanim" : "singRIGHT",
 			"imgname" : "right",
 			"hname"   : "Right"
+		},
+		{
+			"fnfanim" : "singRIGHTmiss",
+			"imgname" : "rightmiss",
+			"hname"   : "Rightmiss"
+		},
+		{
+			"fnfanim" : "dodge",
+			"imgname" : "dodge",
+			"hname"   : "Dodge"
 		}
 	],
-	"input":  "iso/characters/mordee/erectecai",
-	"outdir": "iso/characters/mordee/",
-	"charname" : "MordeE",
-	"optimize" : false,
-	"optimizename" : "mordee",
+	"input":  "iso/characters/bf/bf",
+	"outdir": "iso/characters/bf/",
+	"charname" : "BF",
+	"optimize" : true,
+	"optimizename" : "bf",
 	"arcname" : "ArcMain",
-	"vrampos" : [
-		448, 
-		256, 
-		0, 
-		481
-	],
-
+	"vrampos" : [448, 0, 0, 480],
 	"bpp" : 8,
 	"resize" : 0.25,
 	"xmlscale" : 1.0,

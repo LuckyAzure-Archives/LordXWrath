@@ -1,8 +1,8 @@
 	{ //StageId_1_1
 		//Characters
 		{Char_BF_New,    FIXED_DEC(110,1),  FIXED_DEC(110,1)},
-		{Char_Dad_New, FIXED_DEC(-20,1),  FIXED_DEC(70,1)},
-		{Char_GF_New,     FIXED_DEC(0,1),  FIXED_DEC(-10,1)},
+		{Char_LordX_New, FIXED_DEC(-110,1),  FIXED_DEC(110,1)},
+		{NULL,     FIXED_DEC(0,1),  FIXED_DEC(-10,1)},
 		
 		//Stage background
 		Back_Default_New,
@@ -17,8 +17,8 @@
 	{ //StageId_1_2
 		//Characters
 		{Char_BF_New,    FIXED_DEC(110,1),  FIXED_DEC(110,1)},
-		{Char_Dad_New, FIXED_DEC(-20,1),  FIXED_DEC(70,1)},
-		{Char_GF_New,     FIXED_DEC(0,1),  FIXED_DEC(-10,1)},
+		{Char_LordX_New, FIXED_DEC(-110,1),  FIXED_DEC(110,1)},
+		{NULL,     FIXED_DEC(0,1),  FIXED_DEC(-10,1)},
 		
 		//Stage background
 		Back_Default_New,
@@ -34,7 +34,7 @@
 		//Characters
 		{Char_BF_New,    FIXED_DEC(110,1),  FIXED_DEC(110,1)},
 		{Char_Dad_New, FIXED_DEC(-20,1),  FIXED_DEC(70,1)},
-		{Char_GF_New,     FIXED_DEC(0,1),  FIXED_DEC(-10,1)},
+		{NULL,     FIXED_DEC(0,1),  FIXED_DEC(-10,1)},
 		
 		//Stage background
 		Back_Default_New,
@@ -49,8 +49,8 @@
 	{ //StageId_2_1
 		//Characters
 		{Char_BF_New,    FIXED_DEC(110,1),  FIXED_DEC(110,1)},
-		{Char_Dad_New, FIXED_DEC(-20,1),  FIXED_DEC(70,1)},
-		{Char_GF_New,     FIXED_DEC(0,1),  FIXED_DEC(-10,1)},
+		{Char_LordX_New, FIXED_DEC(-110,1),  FIXED_DEC(110,1)},
+		{NULL,     FIXED_DEC(0,1),  FIXED_DEC(-10,1)},
 		
 		//Stage background
 		Back_Default_New,
@@ -65,8 +65,8 @@
 	{ //StageId_2_2
 		//Characters
 		{Char_BF_New,    FIXED_DEC(110,1),  FIXED_DEC(110,1)},
-		{Char_Dad_New, FIXED_DEC(-20,1),  FIXED_DEC(70,1)},
-		{Char_GF_New,     FIXED_DEC(0,1),  FIXED_DEC(-10,1)},
+		{Char_LordX_New, FIXED_DEC(-110,1),  FIXED_DEC(110,1)},
+		{NULL,     FIXED_DEC(0,1),  FIXED_DEC(-10,1)},
 		
 		//Stage background
 		Back_Default_New,
@@ -81,8 +81,8 @@
 	{ //StageId_2_3
 		//Characters
 		{Char_BF_New,    FIXED_DEC(110,1),  FIXED_DEC(110,1)},
-		{Char_Dad_New, FIXED_DEC(-20,1),  FIXED_DEC(70,1)},
-		{Char_GF_New,     FIXED_DEC(0,1),  FIXED_DEC(-10,1)},
+		{Char_LordX_New, FIXED_DEC(-110,1),  FIXED_DEC(110,1)},
+		{NULL,     FIXED_DEC(0,1),  FIXED_DEC(-10,1)},
 		
 		//Stage background
 		Back_Default_New,
@@ -97,8 +97,8 @@
 	{ //StageId_2_4
 		//Characters
 		{Char_BF_New,    FIXED_DEC(110,1),  FIXED_DEC(110,1)},
-		{Char_Dad_New, FIXED_DEC(-20,1),  FIXED_DEC(70,1)},
-		{Char_GF_New,     FIXED_DEC(0,1),  FIXED_DEC(-10,1)},
+		{Char_LordX_New, FIXED_DEC(-110,1),  FIXED_DEC(110,1)},
+		{NULL,     FIXED_DEC(0,1),  FIXED_DEC(-10,1)},
 		
 		//Stage background
 		Back_Default_New,
@@ -113,8 +113,8 @@
 	{ //StageId_2_5
 		//Characters
 		{Char_BF_New,    FIXED_DEC(110,1),  FIXED_DEC(110,1)},
-		{Char_Dad_New, FIXED_DEC(-20,1),  FIXED_DEC(70,1)},
-		{Char_GF_New,     FIXED_DEC(0,1),  FIXED_DEC(-10,1)},
+		{Char_LordX_New, FIXED_DEC(-110,1),  FIXED_DEC(110,1)},
+		{NULL,     FIXED_DEC(0,1),  FIXED_DEC(-10,1)},
 		
 		//Stage background
 		Back_Default_New,
@@ -129,8 +129,8 @@
 	{ //StageId_2_6
 		//Characters
 		{Char_BF_New,    FIXED_DEC(110,1),  FIXED_DEC(110,1)},
-		{Char_Dad_New, FIXED_DEC(-20,1),  FIXED_DEC(70,1)},
-		{Char_GF_New,     FIXED_DEC(0,1),  FIXED_DEC(-10,1)},
+		{Char_LordX_New, FIXED_DEC(-110,1),  FIXED_DEC(110,1)},
+		{NULL,     FIXED_DEC(0,1),  FIXED_DEC(-10,1)},
 		
 		//Stage background
 		Back_Default_New,
@@ -145,8 +145,8 @@
 	{ //StageId_2_7
 		//Characters
 		{Char_BF_New,    FIXED_DEC(110,1),  FIXED_DEC(110,1)},
-		{Char_Dad_New, FIXED_DEC(-20,1),  FIXED_DEC(70,1)},
-		{Char_GF_New,     FIXED_DEC(0,1),  FIXED_DEC(-10,1)},
+		{Char_LordXC_New, FIXED_DEC(-110,1),  FIXED_DEC(110,1)},
+		{NULL,     FIXED_DEC(0,1),  FIXED_DEC(-10,1)},
 		
 		//Stage background
 		Back_Default_New,

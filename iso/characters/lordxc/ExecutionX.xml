@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="ExecutionX.png">
+	<!-- Created with Adobe Animate version 23.0.0.407 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="lordxdown instance 10000" x="0" y="0" width="553" height="563" frameX="0" frameY="-32" frameWidth="553" frameHeight="595"/>
+	<SubTexture name="lordxdown instance 10001" x="553" y="0" width="542" height="585" frameX="-6" frameY="-10" frameWidth="553" frameHeight="595"/>
+	<SubTexture name="lordxdown instance 10002" x="1095" y="0" width="539" height="593" frameX="-8" frameY="-2" frameWidth="553" frameHeight="595"/>
+	<SubTexture name="lordxdown instance 10003" x="1634" y="0" width="536" height="594" frameX="-10" frameY="-1" frameWidth="553" frameHeight="595"/>
+	<SubTexture name="lordxdown instance 10004" x="2170" y="0" width="535" height="595" frameX="-11" frameY="0" frameWidth="553" frameHeight="595"/>
+	<SubTexture name="lordxdown instance 10005" x="2705" y="0" width="534" height="595" frameX="-12" frameY="0" frameWidth="553" frameHeight="595"/>
+	<SubTexture name="lordxdown instance 10006" x="3239" y="0" width="533" height="595" frameX="-13" frameY="0" frameWidth="553" frameHeight="595"/>
+	<SubTexture name="lordxdown instance 10007" x="3772" y="0" width="533" height="595" frameX="-13" frameY="0" frameWidth="553" frameHeight="595"/>
+	<SubTexture name="lordxdown instance 10008" x="4305" y="0" width="532" height="594" frameX="-14" frameY="-1" frameWidth="553" frameHeight="595"/>
+	<SubTexture name="lordxdown instance 10009" x="4837" y="0" width="532" height="593" frameX="-14" frameY="-2" frameWidth="553" frameHeight="595"/>
+	<SubTexture name="lordxdown instance 10010" x="5369" y="0" width="533" height="592" frameX="-13" frameY="-3" frameWidth="553" frameHeight="595"/>
+	<SubTexture name="lordxidle instance 10000" x="5902" y="0" width="601" height="670" frameX="-9" frameY="-9" frameWidth="611" frameHeight="679"/>
+	<SubTexture name="lordxidle instance 10001" x="6503" y="0" width="600" height="670" frameX="-10" frameY="-9" frameWidth="611" frameHeight="679"/>
+	<SubTexture name="lordxidle instance 10002" x="7103" y="0" width="601" height="671" frameX="-10" frameY="-8" frameWidth="611" frameHeight="679"/>
+	<SubTexture name="lordxidle instance 10003" x="0" y="671" width="600" height="672" frameX="-10" frameY="-7" frameWidth="611" frameHeight="679"/>
+	<SubTexture name="lordxidle instance 10004" x="600" y="671" width="598" height="673" frameX="-7" frameY="-6" frameWidth="611" frameHeight="679"/>
+	<SubTexture name="lordxidle instance 10005" x="1198" y="671" width="584" height="677" frameX="-2" frameY="-2" frameWidth="611" frameHeight="679"/>
+	<SubTexture name="lordxidle instance 10006" x="1782" y="671" width="572" height="677" frameX="0" frameY="-2" frameWidth="611" frameHeight="679"/>
+	<SubTexture name="lordxidle instance 10007" x="2354" y="671" width="570" height="678" frameX="0" frameY="-1" frameWidth="611" frameHeight="679"/>
+	<SubTexture name="lordxidle instance 10008" x="2924" y="671" width="572" height="679" frameX="0" frameY="0" frameWidth="611" frameHeight="679"/>
+	<SubTexture name="lordxidle instance 10009" x="3496" y="671" width="573" height="679" frameX="-1" frameY="0" frameWidth="611" frameHeight="679"/>
+	<SubTexture name="lordxidle instance 10010" x="3496" y="671" width="573" height="679" frameX="-1" frameY="0" frameWidth="611" frameHeight="679"/>
+	<SubTexture name="lordxidle instance 10011" x="3496" y="671" width="573" height="679" frameX="-1" frameY="0" frameWidth="611" frameHeight="679"/>
+	<SubTexture name="lordxidle instance 10012" x="3496" y="671" width="573" height="679" frameX="-1" frameY="0" frameWidth="611" frameHeight="679"/>
+	<SubTexture name="lordxidle instance 10013" x="3496" y="671" width="573" height="679" frameX="-1" frameY="0" frameWidth="611" frameHeight="679"/>
+	<SubTexture name="lordxidle instance 10014" x="3496" y="671" width="573" height="679" frameX="-1" frameY="0" frameWidth="611" frameHeight="679"/>
+	<SubTexture name="lordxidle instance 10015" x="3496" y="671" width="573" height="679" frameX="-1" frameY="0" frameWidth="611" frameHeight="679"/>
+	<SubTexture name="lordxleft instance 10000" x="4069" y="671" width="639" height="685" frameX="0" frameY="0" frameWidth="715" frameHeight="685"/>
+	<SubTexture name="lordxleft instance 10001" x="4708" y="671" width="617" height="663" frameX="-64" frameY="-22" frameWidth="715" frameHeight="685"/>
+	<SubTexture name="lordxleft instance 10002" x="5325" y="671" width="609" height="661" frameX="-87" frameY="-24" frameWidth="715" frameHeight="685"/>
+	<SubTexture name="lordxleft instance 10003" x="5934" y="671" width="607" height="659" frameX="-96" frameY="-26" frameWidth="715" frameHeight="685"/>
+	<SubTexture name="lordxleft instance 10004" x="6541" y="671" width="608" height="659" frameX="-100" frameY="-26" frameWidth="715" frameHeight="685"/>
+	<SubTexture name="lordxleft instance 10005" x="7149" y="671" width="608" height="658" frameX="-103" frameY="-27" frameWidth="715" frameHeight="685"/>
+	<SubTexture name="lordxleft instance 10006" x="0" y="1356" width="608" height="658" frameX="-105" frameY="-27" frameWidth="715" frameHeight="685"/>
+	<SubTexture name="lordxleft instance 10007" x="608" y="1356" width="609" height="658" frameX="-105" frameY="-27" frameWidth="715" frameHeight="685"/>
+	<SubTexture name="lordxleft instance 10008" x="1217" y="1356" width="610" height="657" frameX="-105" frameY="-28" frameWidth="715" frameHeight="685"/>
+	<SubTexture name="lordxleft instance 10009" x="1827" y="1356" width="611" height="657" frameX="-103" frameY="-28" frameWidth="715" frameHeight="685"/>
+	<SubTexture name="lordxleft instance 10010" x="2438" y="1356" width="613" height="658" frameX="-101" frameY="-27" frameWidth="715" frameHeight="685"/>
+	<SubTexture name="lordxright instance 10000" x="3051" y="1356" width="605" height="628" frameX="-41" frameY="-1" frameWidth="662" frameHeight="629"/>
+	<SubTexture name="lordxright instance 10001" x="3656" y="1356" width="622" height="628" frameX="-23" frameY="-1" frameWidth="662" frameHeight="629"/>
+	<SubTexture name="lordxright instance 10002" x="4278" y="1356" width="636" height="628" frameX="-15" frameY="-1" frameWidth="662" frameHeight="629"/>
+	<SubTexture name="lordxright instance 10003" x="4914" y="1356" width="645" height="629" frameX="-10" frameY="0" frameWidth="662" frameHeight="629"/>
+	<SubTexture name="lordxright instance 10004" x="5559" y="1356" width="651" height="629" frameX="-7" frameY="0" frameWidth="662" frameHeight="629"/>
+	<SubTexture name="lordxright instance 10005" x="6210" y="1356" width="655" height="629" frameX="-4" frameY="0" frameWidth="662" frameHeight="629"/>
+	<SubTexture name="lordxright instance 10006" x="6865" y="1356" width="657" height="629" frameX="-3" frameY="0" frameWidth="662" frameHeight="629"/>
+	<SubTexture name="lordxright instance 10007" x="7522" y="1356" width="659" height="629" frameX="-2" frameY="0" frameWidth="662" frameHeight="629"/>
+	<SubTexture name="lordxright instance 10008" x="0" y="2014" width="661" height="629" frameX="-1" frameY="0" frameWidth="662" frameHeight="629"/>
+	<SubTexture name="lordxright instance 10009" x="661" y="2014" width="662" height="629"/>
+	<SubTexture name="lordxright instance 10010" x="1323" y="2014" width="662" height="629"/>
+	<SubTexture name="lordxup instance 10000" x="1985" y="2014" width="682" height="758" frameX="0" frameY="0" frameWidth="691" frameHeight="758"/>
+	<SubTexture name="lordxup instance 10001" x="2667" y="2014" width="662" height="731" frameX="-23" frameY="-27" frameWidth="691" frameHeight="758"/>
+	<SubTexture name="lordxup instance 10002" x="3329" y="2014" width="656" height="721" frameX="-31" frameY="-37" frameWidth="691" frameHeight="758"/>
+	<SubTexture name="lordxup instance 10003" x="3985" y="2014" width="652" height="716" frameX="-37" frameY="-42" frameWidth="691" frameHeight="758"/>
+	<SubTexture name="lordxup instance 10004" x="4637" y="2014" width="648" height="712" frameX="-41" frameY="-46" frameWidth="691" frameHeight="758"/>
+	<SubTexture name="lordxup instance 10005" x="5285" y="2014" width="646" height="710" frameX="-44" frameY="-48" frameWidth="691" frameHeight="758"/>
+	<SubTexture name="lordxup instance 10006" x="5931" y="2014" width="643" height="708" frameX="-47" frameY="-50" frameWidth="691" frameHeight="758"/>
+	<SubTexture name="lordxup instance 10007" x="6574" y="2014" width="641" height="707" frameX="-49" frameY="-51" frameWidth="691" frameHeight="758"/>
+	<SubTexture name="lordxup instance 10008" x="7215" y="2014" width="641" height="706" frameX="-50" frameY="-52" frameWidth="691" frameHeight="758"/>
+	<SubTexture name="lordxup instance 10009" x="0" y="2772" width="640" height="707" frameX="-51" frameY="-51" frameWidth="691" frameHeight="758"/>
+	<SubTexture name="lordxup instance 10010" x="640" y="2772" width="640" height="707" frameX="-51" frameY="-51" frameWidth="691" frameHeight="758"/>
+</TextureAtlas>

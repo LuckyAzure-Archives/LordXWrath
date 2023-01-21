@@ -4,6 +4,8 @@
 
 //Opponents
 #include "../../characters/dad/dad.h"
+#include "../../characters/lordxc/lordxc.h"
+#include "../../characters/lordx/lordx.h"
 
 //Stages
 #include "../../stages/default/default.h"

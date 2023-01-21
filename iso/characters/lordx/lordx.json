@@ -1,0 +1,100 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 30,
+			"name": "X-idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				482,
+				-31
+			],
+			"anim": "singLEFT",
+			"fps": 30,
+			"name": "X-left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				20
+			],
+			"anim": "singUP",
+			"fps": 30,
+			"name": "X-up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				251,
+				-171
+			],
+			"anim": "singDOWN",
+			"fps": 30,
+			"name": "X-down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				80,
+				-90
+			],
+			"anim": "singRIGHT",
+			"fps": 30,
+			"name": "X-right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				83,
+				27
+			],
+			"anim": "attack",
+			"fps": 30,
+			"name": "X-atack",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				211,
+				181
+			],
+			"anim": "singUP-alt",
+			"fps": 30,
+			"name": "X-laugh",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/LordX",
+	"position": [
+		-100,
+		-240
+	],
+	"healthicon": "lordx",
+	"flip_x": false,
+	"healthbar_colors": [
+		120,
+		119,
+		176
+	],
+	"camera_position": [
+		-510,
+		-140
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

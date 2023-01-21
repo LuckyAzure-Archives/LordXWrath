@@ -48,6 +48,8 @@
 			
 			<!-- Characters assets -->
 			<dir name = "char">
+				<file name = "lordxc.arc" type = "data" source = "iso/characters/lordxc/main.arc"/>
+				<file name = "lordx.arc" type = "data" source = "iso/characters/lordx/main.arc"/>
 				<!-- Boyfriend assets -->
 				<file name = "bf.arc" type = "data" source = "iso/characters/bf/main.arc"/>
 				
