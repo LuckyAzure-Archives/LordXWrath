@@ -6,9 +6,11 @@
 #include "../../characters/dad/dad.h"
 #include "../../characters/lordxc/lordxc.h"
 #include "../../characters/lordx/lordx.h"
+#include "../../characters/slaves/slaves.h"
 
 //Stages
 #include "../../stages/default/default.h"
+#include "../../stages/blank/blank.h"
 
 //Middle Char (Girlfriend)
 #include "../../characters/gf/gf.h"
@@ -19,6 +21,7 @@
 #include "object/combo.h"
 #include "object/splash.h"
 
+#include "pause.h"
 #include "../menu/menu.h"
 
 #include "../../main.h"
@@ -1085,9 +1088,11 @@ static void Stage_LoadState(void)
 	timer.secondtimer = 0;
 	timer.timer = Audio_GetLength(stage.stage_def->music_track) - 1;
 	timer.timermin = 0;
+	stage.paused = false;
 	
 	stage.player_state[0].character = stage.player;
 	stage.player_state[1].character = stage.opponent;
+
 	
 	for (int i = 0; i < 2; i++)
 	{
@@ -1174,6 +1179,7 @@ void Stage_Load(StageId id, StageDiff difficulty, boolean story)
 	
 	//load fonts
 	FontData_Load(&stage.font_cdr, Font_CDR);
+	FontData_Load(&stage.font_bold, Font_Bold);
 	
 	//Load music
 	stage.note_scroll = 0;
@@ -1275,16 +1281,12 @@ void Stage_Tick(void)
 {
 	SeamLoad:;
 	
-	//Return to menu when start is pressed
-	if (pad_state.press & PAD_START)
-	{
-		stage.trans = (stage.state == StageState_Play) ? StageTrans_Menu : StageTrans_Reload;
-		Trans_Start();
-	}
-	
 	//Tick transition
 	if (Trans_Tick())
 	{
+		stage.pause_select = 0;
+		stage.paused = false;
+		
 		switch (stage.trans)
 		{
 			case StageTrans_Menu:
@@ -1330,6 +1332,27 @@ void Stage_Tick(void)
 	{
 		case StageState_Play:
 		{
+			if (stage.song_step >= 0)
+			{
+				if (stage.paused == false && pad_state.press & PAD_START)
+				{
+					stage.pause_scroll = -1;
+					Audio_PauseXA();
+					stage.paused = true;
+					pad_state.press = 0;
+				}
+			}
+
+			if (stage.paused)
+			{
+				switch (stage.pause_state)
+				{
+					case 0:
+						PausedState();
+						break;
+				}
+			}
+			
 			Events();
 			
 			//Manage Notes Position
@@ -1369,104 +1392,143 @@ void Stage_Tick(void)
 			boolean playing;
 			fixed_t next_scroll;
 			
-			if (stage.note_scroll < 0)
-			{
-				//Play countdown sequence
-				stage.song_time += timer_dt;
-					
-				//Update song
-				if (stage.song_time >= 0)
-				{
-					//Song has started
-					playing = true;
-
-					Audio_PlayXA_Track(stage.stage_def->music_track, 0x40, stage.stage_def->music_channel, 0);
-						
-					//Update song time
-					fixed_t audio_time = (fixed_t)Audio_TellXA_Milli() - stage.offset;
-					if (audio_time < 0)
-						audio_time = 0;
-					stage.interp_ms = (audio_time << FIXED_SHIFT) / 1000;
-					stage.interp_time = 0;
-					stage.song_time = stage.interp_ms;
-				}
-				else
-				{
-					//Still scrolling
-					playing = false;
-				}
-				
-				//Update scroll
-				next_scroll = FIXED_MUL(stage.song_time, stage.step_crochet);
-			}
-			else if (Audio_PlayingXA())
-			{
-				fixed_t audio_time_pof = (fixed_t)Audio_TellXA_Milli();
-				fixed_t audio_time = (audio_time_pof > 0) ? (audio_time_pof - stage.offset) : 0;
-				
-				//Old sync
-				stage.interp_ms = (audio_time << FIXED_SHIFT) / 1000;
-				stage.interp_time = 0;
-				stage.song_time = stage.interp_ms;
-				
-				playing = true;
-				
-				//Update scroll
-				next_scroll = ((fixed_t)stage.step_base << FIXED_SHIFT) + FIXED_MUL(stage.song_time - stage.time_base, stage.step_crochet);
-			}
-			else
-			{
-				//Song has ended
-				playing = false;
-				stage.song_time += timer_dt;
-					
-				//Update scroll
-				next_scroll = ((fixed_t)stage.step_base << FIXED_SHIFT) + FIXED_MUL(stage.song_time - stage.time_base, stage.step_crochet);
-				
-				//Transition to menu or next song
-				if (stage.story && stage.stage_def->next_stage != stage.stage_id)
-				{
-					if (Stage_NextLoad())
-						goto SeamLoad;
-				}
-				else
-				{
-					stage.trans = StageTrans_Menu;
-					Trans_Start();
-				}
-			}	
-
-			RecalcScroll:;
-			//Update song scroll and step
-			if (next_scroll > stage.note_scroll)
-			{
-				if (((stage.note_scroll / 12) & FIXED_UAND) != ((next_scroll / 12) & FIXED_UAND))
-					stage.flag |= STAGE_FLAG_JUST_STEP;
-				stage.note_scroll = next_scroll;
-				stage.song_step = (stage.note_scroll >> FIXED_SHIFT);
-				if (stage.note_scroll < 0)
-					stage.song_step -= 11;
-				stage.song_step /= 12;
-			}
+			const fixed_t interp_int = FIXED_UNIT * 8 / 75;
 			
-			//Update section
-			if (stage.note_scroll >= 0)
+			if (!stage.paused)
 			{
-				//Check if current section has ended
-				u16 end = stage.cur_section->end;
-				if ((stage.note_scroll >> FIXED_SHIFT) >= end)
+				if (stage.note_scroll < 0)
 				{
-					//Increment section pointer
-					stage.cur_section++;
+					//Play countdown sequence
+					stage.song_time += timer_dt;
+						
+					//Update song
+					if (stage.song_time >= 0)
+					{
+						//Song has started
+						playing = true;
+						
+						Audio_PlayXA_Track(stage.stage_def->music_track, 0x40, stage.stage_def->music_channel, 0);
+							
+						//Update song time
+						fixed_t audio_time = (fixed_t)Audio_TellXA_Milli() - stage.offset;
+						if (audio_time < 0)
+							audio_time = 0;
+						stage.interp_ms = (audio_time << FIXED_SHIFT) / 1000;
+						stage.interp_time = 0;
+						stage.song_time = stage.interp_ms;
+					}
+					else
+					{
+						//Still scrolling
+						playing = false;
+					}
 					
-					//Update BPM
-					u16 next_bpm = stage.cur_section->flag & SECTION_FLAG_BPM_MASK;
-					Stage_ChangeBPM(next_bpm, end);
-					stage.section_base = stage.cur_section;
+					//Update scroll
+					next_scroll = FIXED_MUL(stage.song_time, stage.step_crochet);
+				}
+				else if (Audio_PlayingXA())
+				{
+					fixed_t audio_time_pof = (fixed_t)Audio_TellXA_Milli();
+					fixed_t audio_time = (audio_time_pof > 0) ? (audio_time_pof - stage.offset) : 0;
 					
-					//Recalculate scroll based off new BPM
+					if (stage.prefs.expsync)
+					{
+						//Get playing song position
+						if (audio_time_pof > 0)
+						{
+							stage.song_time += timer_dt;
+							stage.interp_time += timer_dt;
+						}
+						
+						if (stage.interp_time >= interp_int)
+						{
+							//Update interp state
+							while (stage.interp_time >= interp_int)
+								stage.interp_time -= interp_int;
+							stage.interp_ms = (audio_time << FIXED_SHIFT) / 1000;
+						}
+						
+						//Resync
+						fixed_t next_time = stage.interp_ms + stage.interp_time;
+						if (stage.song_time >= next_time + FIXED_DEC(25,1000) || stage.song_time <= next_time - FIXED_DEC(25,1000))
+						{
+							stage.song_time = next_time;
+						}
+						else
+						{
+							if (stage.song_time < next_time - FIXED_DEC(1,1000))
+								stage.song_time += FIXED_DEC(1,1000);
+							if (stage.song_time > next_time + FIXED_DEC(1,1000))
+								stage.song_time -= FIXED_DEC(1,1000);
+						}
+					}
+					else
+					{
+						//Old sync
+						stage.interp_ms = (audio_time << FIXED_SHIFT) / 1000;
+						stage.interp_time = 0;
+						stage.song_time = stage.interp_ms;
+					}
+					
+					playing = true;
+					
+					//Update scroll
 					next_scroll = ((fixed_t)stage.step_base << FIXED_SHIFT) + FIXED_MUL(stage.song_time - stage.time_base, stage.step_crochet);
-					goto RecalcScroll;
+				}
+				else
+				{
+					//Song has ended
+					playing = false;
+					stage.song_time += timer_dt;
+						
+					//Update scroll
+					next_scroll = ((fixed_t)stage.step_base << FIXED_SHIFT) + FIXED_MUL(stage.song_time - stage.time_base, stage.step_crochet);
+					
+					//Transition to menu or next song
+					if (stage.story && stage.stage_def->next_stage != stage.stage_id)
+					{
+						if (Stage_NextLoad())
+							goto SeamLoad;
+					}
+					else
+					{
+						stage.trans = StageTrans_Menu;
+						Trans_Start();
+					}
+				}	
+                
+				RecalcScroll:;
+				//Update song scroll and step
+				if (next_scroll > stage.note_scroll)
+				{
+					if (((stage.note_scroll / 12) & FIXED_UAND) != ((next_scroll / 12) & FIXED_UAND))
+						stage.flag |= STAGE_FLAG_JUST_STEP;
+					stage.note_scroll = next_scroll;
+					stage.song_step = (stage.note_scroll >> FIXED_SHIFT);
+					if (stage.note_scroll < 0)
+						stage.song_step -= 11;
+					stage.song_step /= 12;
+				}
+				
+				//Update section
+				if (stage.note_scroll >= 0)
+				{
+					//Check if current section has ended
+					u16 end = stage.cur_section->end;
+					if ((stage.note_scroll >> FIXED_SHIFT) >= end)
+					{
+						//Increment section pointer
+						stage.cur_section++;
+						
+						//Update BPM
+						u16 next_bpm = stage.cur_section->flag & SECTION_FLAG_BPM_MASK;
+						Stage_ChangeBPM(next_bpm, end);
+						stage.section_base = stage.cur_section;
+						
+						//Recalculate scroll based off new BPM
+						next_scroll = ((fixed_t)stage.step_base << FIXED_SHIFT) + FIXED_MUL(stage.song_time - stage.time_base, stage.step_crochet);
+						goto RecalcScroll;
+					}
 				}
 			}
 			

@@ -9,7 +9,36 @@
 #include "../psx/movie.h"
 #include "../psx/mutil.h"
 
+#include "../characters/slaves/slaves.h"
+
 Event event;
+
+static void Slavess()
+{
+	switch(stage.song_step)
+	{
+		case 1085:
+			event.shake = 100;
+			slaves.type = 3;
+			slaves.change = true;
+			break;
+		case 1601:
+			event.shake = 100;
+			slaves.type = 1;
+			slaves.change = true;
+			break;
+		case 2430:
+			event.shake = 100;
+			slaves.type = 2;
+			slaves.change = true;
+			break;
+		case 3233:
+			event.shake = 100;
+			slaves.type = 3;
+			slaves.change = true;
+			break;
+	}
+}
 
 void Events()
 {
@@ -17,6 +46,8 @@ void Events()
 	//FntPrint("steps: %d", stage.song_step);
 	if(stage.prefs.followcamera)
 		FollowCharCamera();
+	if (stage.stage_id == StageId_1_3)
+		Slavess();
 }
 
 void FollowCharCamera()
@@ -48,7 +79,6 @@ void FollowCharCamera()
 
 void NoteHitEvent(u8 type)
 {
-	stage.bump += FIXED_DEC(10,1000);
 	if (type & NOTE_FLAG_BULLET)
 	{
 		stage.camera.zoom += FIXED_DEC(200,1000);

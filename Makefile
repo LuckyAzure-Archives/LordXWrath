@@ -8,15 +8,18 @@ SRCS = src/main.c \
        src/characters/dad/dad.c \
 	   src/characters/lordxc/lordxc.c \
 	   src/characters/lordx/lordx.c \
+	   src/characters/slaves/slaves.c \
 	   \
        src/characters/gf/gf.c \
        src/characters/gf/speaker.c \
 	   \
        src/stages/default/default.c \
+       src/stages/blank/blank.c \
 	   \
        src/scenes/menu/menu.c \
 	   \
        src/scenes/stage/stage.c \
+       src/scenes/stage/pause.c \
 	   src/scenes/stage/animation.c \
        src/scenes/stage/character.c \
        src/scenes/stage/object.c \

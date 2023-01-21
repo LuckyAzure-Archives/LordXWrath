@@ -32,12 +32,12 @@
 	},
 	{ //StageId_1_3
 		//Characters
-		{Char_BF_New,    FIXED_DEC(110,1),  FIXED_DEC(110,1)},
-		{Char_Dad_New, FIXED_DEC(-20,1),  FIXED_DEC(70,1)},
+		{Char_BF_New,    FIXED_DEC(90,1),  FIXED_DEC(110,1)},
+		{Char_Slaves_New, FIXED_DEC(-90,1),  FIXED_DEC(110,1)},
 		{NULL,     FIXED_DEC(0,1),  FIXED_DEC(-10,1)},
 		
 		//Stage background
-		Back_Default_New,
+		Back_Blank_New,
 		
 		//Song info
 		1, 3,

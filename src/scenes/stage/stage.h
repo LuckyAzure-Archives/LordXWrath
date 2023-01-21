@@ -9,6 +9,7 @@
 #include "character.h"
 #include "player.h"
 #include "object.h"
+#include "pause.h"
 #include "../../fonts/font.h"
 
 //Stage constants
@@ -160,6 +161,7 @@ typedef struct
 	DRAWENV draw[2];
 	
 	//Stage settings
+	int pause_state;
 	int pal_i;
 	struct
 	{
@@ -171,6 +173,8 @@ typedef struct
 		boolean downscroll, middlescroll, ghost, vibrate, botplay;
 		
 		boolean palmode;
+		
+		boolean expsync;
 	} prefs;
 	
 	//Song settings
@@ -178,10 +182,14 @@ typedef struct
 	
 	u32 offset;
 	
+	fixed_t pause_scroll;
+	u8 pause_select;
+	boolean paused;
+	
 	u32 sound[1];
 	
 	//font
-	FontData font_cdr;
+	FontData font_cdr, font_bold;
 	
 	//HUD textures
 	Gfx_Tex tex_hud0, tex_hud1, tex_note;
@@ -234,7 +242,7 @@ typedef struct
 	u16 step_base;
 	Section *section_base;
 	
-	s16 song_step;
+	s32 song_step;
 	
 	u8 gf_speed; //Typically 4 steps, changes in Fresh
 	

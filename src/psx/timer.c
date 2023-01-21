@@ -126,7 +126,7 @@ void StageTimer_Tick()
 void StageTimer_Draw()
 {
 	//Draw timer
-	FntPrint("%d",timer.timer);
+	//FntPrint("%d",timer.timer);
 	sprintf(timer.timer_display, "%d", timer.timermin);
 	stage.font_cdr.draw(&stage.font_cdr,
 		timer.timer_display,

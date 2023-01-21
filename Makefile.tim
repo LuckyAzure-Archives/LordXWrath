@@ -4,6 +4,7 @@ all: \
 	iso/characters/dad/main.arc \
 	iso/characters/lordx/main.arc \
 	iso/characters/lordxc/main.arc \
+	iso/characters/slaves/main.arc \
 	\
 	iso/characters/gf/main.arc \
 	iso/characters/gf/tut.arc \
@@ -47,3 +48,6 @@ iso/characters/lordxc/main.arc: iso/characters/lordxc/idle0.tim iso/characters/l
 
 # LordX
 iso/characters/lordx/main.arc: iso/characters/lordx/idle0.tim iso/characters/lordx/idle1.tim iso/characters/lordx/idle2.tim iso/characters/lordx/idle3.tim iso/characters/lordx/idle4.tim iso/characters/lordx/idle5.tim iso/characters/lordx/idle6.tim iso/characters/lordx/left0.tim iso/characters/lordx/left1.tim iso/characters/lordx/left2.tim iso/characters/lordx/left3.tim iso/characters/lordx/left4.tim iso/characters/lordx/down0.tim iso/characters/lordx/down1.tim iso/characters/lordx/down2.tim iso/characters/lordx/down3.tim iso/characters/lordx/down4.tim iso/characters/lordx/up0.tim iso/characters/lordx/up1.tim iso/characters/lordx/up2.tim iso/characters/lordx/up3.tim iso/characters/lordx/up4.tim iso/characters/lordx/right0.tim iso/characters/lordx/right1.tim iso/characters/lordx/right2.tim iso/characters/lordx/right3.tim iso/characters/lordx/right4.tim 
+
+# Bigfuckingslaves
+iso/characters/slaves/main.arc: iso/characters/slaves/tails0.tim iso/characters/slaves/tails1.tim iso/characters/slaves/tails2.tim iso/characters/slaves/tails3.tim iso/characters/slaves/tails4.tim iso/characters/slaves/tails5.tim iso/characters/slaves/tails6.tim iso/characters/slaves/knuck0.tim iso/characters/slaves/knuck1.tim iso/characters/slaves/knuck2.tim iso/characters/slaves/knuck3.tim iso/characters/slaves/knuck9.tim iso/characters/slaves/knuck10.tim iso/characters/slaves/knuck6.tim iso/characters/slaves/knuck7.tim iso/characters/slaves/knuck8.tim iso/characters/slaves/knuck4.tim iso/characters/slaves/knuck5.tim iso/characters/slaves/eggman0.tim iso/characters/slaves/eggman1.tim iso/characters/slaves/eggman2.tim iso/characters/slaves/eggman3.tim iso/characters/slaves/eggman4.tim iso/characters/slaves/eggman5.tim iso/characters/slaves/eggman6.tim iso/characters/slaves/eggman7.tim iso/characters/slaves/eggman8.tim iso/characters/slaves/eggman9.tim iso/characters/slaves/eggman10.tim iso/characters/slaves/interx0.tim iso/characters/slaves/interx1.tim iso/characters/slaves/interx2.tim iso/characters/slaves/interx3.tim iso/characters/slaves/interx4.tim iso/characters/slaves/interx5.tim iso/characters/slaves/interx6.tim iso/characters/slaves/interx7.tim iso/characters/slaves/interx8.tim iso/characters/slaves/interx9.tim iso/characters/slaves/interx10.tim 

@@ -11,19 +11,9 @@
 			"hname"   : "Left"
 		},
 		{
-			"fnfanim" : "singLEFTmiss",
-			"imgname" : "leftmiss",
-			"hname"   : "Leftmiss"
-		},
-		{
 			"fnfanim" : "singDOWN",
 			"imgname" : "down",
 			"hname"   : "Down"
-		},
-		{
-			"fnfanim" : "singDOWNmiss",
-			"imgname" : "downmiss",
-			"hname"   : "Downmiss"
 		},
 		{
 			"fnfanim" : "singUP",
@@ -31,37 +21,22 @@
 			"hname"   : "Up"
 		},
 		{
-			"fnfanim" : "singUPmiss",
-			"imgname" : "upmiss",
-			"hname"   : "Upmiss"
-		},
-		{
 			"fnfanim" : "singRIGHT",
 			"imgname" : "right",
 			"hname"   : "Right"
-		},
-		{
-			"fnfanim" : "singRIGHTmiss",
-			"imgname" : "rightmiss",
-			"hname"   : "Rightmiss"
-		},
-		{
-			"fnfanim" : "dodge",
-			"imgname" : "dodge",
-			"hname"   : "Dodge"
 		}
 	],
-	"input":  "iso/characters/bf/bf",
-	"outdir": "iso/characters/bf/",
-	"charname" : "BF",
+	"input":  "iso/characters/slaves/Tails",
+	"outdir": "iso/characters/slaves/",
+	"charname" : "Tails",
 	"optimize" : true,
-	"optimizename" : "bf",
+	"optimizename" : "tails",
 	"arcname" : "ArcMain",
-	"vrampos" : [448, 0, 0, 480],
+	"vrampos" : [448, 256, 0, 481],
 	"bpp" : 8,
-	"resize" : 0.25,
+	"resize" : 0.20,
 	"xmlscale" : 1.0,
-	"padding" : 1,
+	"padding" : 2,
 	"max_width" : 256,
 	"max_height" : 256
 }
