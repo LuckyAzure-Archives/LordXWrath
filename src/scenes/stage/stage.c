@@ -1,6 +1,7 @@
 //Characters
 //Players
 #include "../../characters/bf/bf.h"
+#include "../../characters/bfpov/bfpov.h"
 
 //Opponents
 #include "../../characters/dad/dad.h"
@@ -11,6 +12,7 @@
 //Stages
 #include "../../stages/default/default.h"
 #include "../../stages/blank/blank.h"
+#include "../../stages/slaves/slavess.h"
 
 //Middle Char (Girlfriend)
 #include "../../characters/gf/gf.h"
@@ -89,7 +91,7 @@ static void Stage_FocusCharacter(Character *ch, fixed_t div)
 	//Use character focus settings to update target position and zoom
 	stage.camera.tx = ch->x + ch->focus_x;
 	stage.camera.ty = ch->y + ch->focus_y;
-	stage.camera.tz = ch->focus_zoom;
+	stage.camera.tz = FIXED_MUL(ch->focus_zoom,event.zoom);
 	stage.camera.td = div;
 }
 
@@ -110,9 +112,9 @@ static void Stage_ScrollCamera(void)
 			stage.camera.zoom += FIXED_DEC(1,100);
 	#else
 		//Scroll based off current divisor
-		stage.camera.x = lerp(stage.camera.x, stage.camera.tx, FIXED_DEC(5,100));
-		stage.camera.y = lerp(stage.camera.y, stage.camera.ty, FIXED_DEC(5,100));
-		stage.camera.zoom = lerp(stage.camera.zoom, stage.camera.tz, FIXED_DEC(5,100));
+		stage.camera.x = lerp(stage.camera.x, stage.camera.tx, event.speed);
+		stage.camera.y = lerp(stage.camera.y, stage.camera.ty, event.speed);
+		stage.camera.zoom = lerp(stage.camera.zoom, stage.camera.tz, event.speed);
 	#endif
 	
 	//Update other camera stuff
@@ -1137,6 +1139,9 @@ void Stage_Load(StageId id, StageDiff difficulty, boolean story)
 	//Load stage background
 	Stage_LoadStage();
 	
+	//Load Events
+	Load_Events();
+	
 	//Load characters
 	Stage_LoadPlayer();
 	Stage_LoadOpponent();
@@ -1367,19 +1372,10 @@ void Stage_Tick(void)
 				note_y[i] = FIXED_DEC(note_def[0][i],1) + FIXED_DEC(RandomRange(-event.shake,event.shake) / 100,1);
 			}
 			
-			stage.font_cdr.draw(&stage.font_cdr,
-				stage.credits,
-				FIXED_DEC(-159,1),
-				FIXED_DEC(108,1),
-				FontAlign_Left
-			);
-			
-			StageTimer_Draw();
-			
 			if (stage.prefs.botplay)
 			{
 				//Draw botplay
-				RECT bot_src = {140, 224, 67, 16};
+				RECT bot_src = {61, 178, 67, 16};
 				RECT_FIXED bot_dst = {FIXED_DEC(-bot_src.w / 2,1), FIXED_DEC(-58,1), FIXED_DEC(bot_src.w,1), FIXED_DEC(bot_src.h,1)};
 
 				Stage_DrawTex(&stage.tex_hud0, &bot_src, &bot_dst, stage.bump);
@@ -1613,6 +1609,20 @@ void Stage_Tick(void)
 			PlayerState *this;
 			s32 VScore;
 			
+			if (!event.hidehud)
+			{
+			
+			//Draw Song's name
+			stage.font_cdr.draw(&stage.font_cdr,
+				stage.credits,
+				FIXED_DEC(-159,1),
+				FIXED_DEC(108,1),
+				FontAlign_Left
+			);
+			
+			//Draw Timer
+			StageTimer_Draw();
+			
 			//Draw Score
 			if (stage.prefs.mode >= StageMode_2P)
 			{
@@ -1734,6 +1744,10 @@ void Stage_Tick(void)
 				Stage_DrawStrum(i | 4, &note_src, &note_dst);
 				Stage_DrawTex(&stage.tex_hud0, &note_src, &note_dst, stage.bump);
 			}
+			
+			};
+			
+			Events_Back();
 			
 			//Draw stage foreground
 			if (stage.back->draw_fg != NULL)

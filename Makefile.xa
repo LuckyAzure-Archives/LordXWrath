@@ -5,6 +5,7 @@ all: \
 	iso/songs/songs3.xa \
 	iso/songs/songs4.xa \
 	iso/songs/songs5.xa \
+	iso/songs/unused1.xa \
 
 iso/%.xa: iso/%.ogg
 	tools/psxavenc/psxavenc -f 37800 -t xa -b 4 -c 2 -F 1 -C 0 $< $@ 
@@ -30,3 +31,5 @@ iso/songs/songs4.xa: iso/songs/conscience/Inst.xa iso/songs/conscience/Merged.xa
 # Songs5
 iso/songs/songs5.xa: iso/songs/petrifying-peppermint/Inst.xa iso/songs/petrifying-peppermint/Merged.xa iso/songs/execution/Inst.xa iso/songs/execution/Merged.xa
 
+# Unused1
+iso/songs/unused1.xa: iso/songs/cycles-legacy/Inst.xa iso/songs/cycles-legacy/Merged.xa

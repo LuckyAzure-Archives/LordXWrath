@@ -4,6 +4,7 @@ TYPE = ps-exe
 SRCS = src/main.c \
 	   \
        src/characters/bf/bf.c \
+       src/characters/bfpov/bfpov.c \
 	   \
        src/characters/dad/dad.c \
 	   src/characters/lordxc/lordxc.c \
@@ -15,6 +16,7 @@ SRCS = src/main.c \
 	   \
        src/stages/default/default.c \
        src/stages/blank/blank.c \
+       src/stages/slaves/slavess.c \
 	   \
        src/scenes/menu/menu.c \
 	   \

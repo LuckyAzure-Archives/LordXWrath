@@ -716,7 +716,8 @@ void Menu_Tick(void)
 				{StageId_2_4, 0xFF9271FD, "CONSCIENCE"},
 				{StageId_2_5, 0xFF9271FD, "NIGHTMARE BEFORE CHRISTMAS"},
 				{StageId_2_6, 0xFF9271FD, "PETRIFYING PEPPERMINT"},
-				{StageId_2_7, 0xFF9271FD, "EXECUTION"}
+				{StageId_2_7, 0xFF9271FD, "EXECUTION"},
+				{StageId_3_1, 0xFF9271FD, "CYCLES LEGACY"}
 			};
 			
 			//Initialize page

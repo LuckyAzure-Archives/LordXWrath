@@ -44,6 +44,7 @@
 			<dir name = "stages">
 				<!-- Background art -->
 				<file name = "default.arc" type = "data" source = "iso/stages/default/back.arc"/>
+				<file name = "slavess.arc" type = "data" source = "iso/stages/slaves/back.arc"/>
 			</dir>
 			
 			<!-- Characters assets -->
@@ -53,6 +54,7 @@
 				<file name = "slaves.arc" type = "data" source = "iso/characters/slaves/main.arc"/>
 				<!-- Boyfriend assets -->
 				<file name = "bf.arc" type = "data" source = "iso/characters/bf/main.arc"/>
+				<file name = "bfpov.arc" type = "data" source = "iso/characters/bfpov/main.arc"/>
 				
 				<!-- Dad assets -->
 				<file name = "dad.arc" type = "data" source = "iso/characters/dad/main.arc"/>
@@ -84,6 +86,8 @@
 				<file name = "2.6.cht" type = "data" source = "iso/songs/petrifying-peppermint/petrifying-peppermint-hard.json.cht"/>
 				
 				<file name = "2.7.cht" type = "data" source = "iso/songs/execution/execution-hard.json.cht"/>
+				
+				<file name = "3.1.cht" type = "data" source = "iso/songs/cycles-legacy/cycles-legacy-hard.json.cht"/>
 			</dir>
 			
 			<!-- Music -->
@@ -106,6 +110,8 @@
 				<file name = "songs5.xa" type = "xa" source = "iso/songs/songs5.xa"/>
 				<dummy sectors="128"/>
 				
+				<file name = "unused1.xa" type = "xa" source = "iso/songs/unused1.xa"/>
+				<dummy sectors="128"/>
 			</dir>
 			
 			<!-- Sound -->

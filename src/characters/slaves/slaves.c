@@ -88,21 +88,21 @@ static const CharFrame char_slaves_frame[] = {
 	{Slaves_ArcMain_tails6,{0,0,134,120},{59,113}}, //12
 	
 	{Slaves_ArcMain_knuck0,{0,0,131,157},{50,151}}, //13
-	{Slaves_ArcMain_knuck1,{0,0,156,168},{67,162}}, //14
-	{Slaves_ArcMain_knuck2,{0,0,158,169},{69,163}}, //15
+	{Slaves_ArcMain_knuck1,{0,0,155,168},{67,162}}, //14
+	{Slaves_ArcMain_knuck2,{0,0,157,169},{69,163}}, //15
 	{Slaves_ArcMain_knuck3,{0,0,157,169},{68,163}}, //16
 	
-	{Slaves_ArcMain_knuck9,{0,0,172,174},{84,158}}, //17
+	{Slaves_ArcMain_knuck9,{0,0,171,174},{84,158}}, //17
 	{Slaves_ArcMain_knuck10,{0,0,167,170},{76,159}}, //18
 	
 	{Slaves_ArcMain_knuck6,{0,0,98,137},{44,131}}, //19
 	{Slaves_ArcMain_knuck6,{121,0,114,137},{42,133}}, //20
 	
 	{Slaves_ArcMain_knuck7,{0,0,117,168},{22,183}}, //21
-	{Slaves_ArcMain_knuck8,{0,0,134,172},{42,173}}, //22
+	{Slaves_ArcMain_knuck8,{0,0,132,172},{42,173}}, //22
 	
-	{Slaves_ArcMain_knuck4,{0,0,156,156},{50,151}}, //23
-	{Slaves_ArcMain_knuck5,{0,0,133,150},{36,145}}, //24
+	{Slaves_ArcMain_knuck4,{0,0,155,156},{50,151}}, //23
+	{Slaves_ArcMain_knuck5,{0,0,131,150},{36,145}}, //24
 	
 	{Slaves_ArcMain_eggman0,{0,0,125,168},{51,161}}, //25
 	{Slaves_ArcMain_eggman1,{0,0,125,173},{52,166}}, //26
@@ -226,6 +226,7 @@ void Char_Slaves_Tick(Character *character)
 				Animatable_Init(&this->character.animatable, char_internalx_anim);
 				break;
 		}
+		Animatable_SetAnim(&character->animatable, CharAnim_Idle);
 	}
 	
 	//Perform idle dance
@@ -294,6 +295,7 @@ Character *Char_Slaves_New(fixed_t x, fixed_t y)
 	this->character.focus_zoom = FIXED_DEC(1,1);
 	
 	this->character.size = FIXED_DEC(4,4);
+	this->character.flipped = false;
 	
 	//Load art
 	this->arc_main = IO_Read("\\CHAR\\SLAVES.ARC;1");

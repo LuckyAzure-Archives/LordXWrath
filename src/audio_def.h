@@ -25,6 +25,8 @@ static const XA_TrackDef xa_tracks[] = {
 	
 	{XA_Songs5, XA_LENGTH(13763)},
 	{XA_Songs5, XA_LENGTH(14861)},
+	
+	{XA_Unused1, XA_LENGTH(13136)},
 };
 
 static const char *xa_paths[] = {
@@ -34,6 +36,7 @@ static const char *xa_paths[] = {
 	"\\MUSIC\\SONGS3.XA;1",
 	"\\MUSIC\\SONGS4.XA;1",
 	"\\MUSIC\\SONGS5.XA;1",
+	"\\MUSIC\\UNUSED1.XA;1",
 	NULL,
 };
 
@@ -62,6 +65,8 @@ static const XA_Mp3 xa_mp3s[] = {
 	
 	{"petrifying-peppermint", true},
 	{"execution", true},
+	
+	{"cycles-legacy", true},
 	
 	{NULL, false}
 };

@@ -13,6 +13,7 @@ typedef enum
 	XA_Songs3,
 	XA_Songs4,
 	XA_Songs5,
+	XA_Unused1,
 	
 	XA_Max,
 } XA_File;
@@ -37,6 +38,8 @@ typedef enum
 
 	XA_PP,
 	XA_Execution,
+	
+	XA_CyclesLegacy,
 	
 	XA_TrackMax,
 } XA_Track;

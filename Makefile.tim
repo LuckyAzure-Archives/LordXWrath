@@ -1,5 +1,6 @@
 all: \
 	iso/characters/bf/main.arc \
+	iso/characters/bfpov/main.arc \
 	\
 	iso/characters/dad/main.arc \
 	iso/characters/lordx/main.arc \
@@ -11,6 +12,7 @@ all: \
 	iso/characters/gf/speaker.tim \
 	\
 	iso/stages/default/back.arc \
+	iso/stages/slaves/back.arc \
 	\
 	iso/images/menu/menu.arc \
 	iso/images/menu/lordx.arc \
@@ -32,6 +34,7 @@ iso/images/menu/lordx.arc: iso/images/menu/lordx0.tim iso/images/menu/lordx1.tim
 
 # BF
 iso/characters/bf/main.arc: iso/characters/bf/bf0.tim iso/characters/bf/bf1.tim iso/characters/bf/bf2.tim iso/characters/bf/bf3.tim iso/characters/bf/bf4.tim iso/characters/bf/bf5.tim iso/characters/bf/bf6.tim iso/characters/bf/bf7.tim iso/characters/bf/dead0.tim iso/characters/bf/dead1.tim iso/characters/bf/dead2.tim iso/characters/bf/dead3.tim iso/characters/bf/dead4.tim iso/characters/bf/dead5.tim iso/characters/bf/dead6.tim 
+iso/characters/bfpov/main.arc: iso/characters/bf/bf0.tim iso/characters/bf/bf1.tim iso/characters/bf/bf2.tim iso/characters/bf/bf3.tim iso/characters/bf/bf4.tim iso/characters/bf/bf5.tim iso/characters/bf/bf6.tim iso/characters/bf/bf7.tim iso/characters/bf/dead0.tim iso/characters/bf/dead1.tim iso/characters/bf/dead2.tim iso/characters/bf/dead3.tim iso/characters/bf/dead4.tim iso/characters/bf/dead5.tim iso/characters/bf/dead6.tim iso/characters/bfpov/bfpov0.tim iso/characters/bfpov/bfpov1.tim iso/characters/bfpov/bfpov2.tim iso/characters/bfpov/bfpov3.tim iso/characters/bfpov/bfpov5.tim iso/characters/bfpov/bfpov4.tim 
 
 # Dad
 iso/characters/dad/main.arc: iso/characters/dad/idle0.tim iso/characters/dad/idle1.tim iso/characters/dad/left.tim iso/characters/dad/down.tim iso/characters/dad/up.tim iso/characters/dad/right.tim
@@ -42,6 +45,9 @@ iso/characters/gf/tut.arc: iso/characters/gf/tut0.tim iso/characters/gf/tut1.tim
 
 # Default
 iso/stages/default/back.arc: iso/stages/default/back0.tim iso/stages/default/back1.tim
+
+# Slaves
+iso/stages/slaves/back.arc: iso/stages/slaves/0.tim iso/stages/slaves/1.tim iso/stages/slaves/2.tim iso/stages/slaves/3.tim iso/stages/slaves/0a.tim iso/stages/slaves/1a.tim 
 
 # LordXC
 iso/characters/lordxc/main.arc: iso/characters/lordxc/idle0.tim iso/characters/lordxc/idle1.tim iso/characters/lordxc/idle2.tim iso/characters/lordxc/idle3.tim iso/characters/lordxc/idle4.tim iso/characters/lordxc/left0.tim iso/characters/lordxc/left1.tim iso/characters/lordxc/left2.tim iso/characters/lordxc/left3.tim iso/characters/lordxc/left4.tim iso/characters/lordxc/down0.tim iso/characters/lordxc/down1.tim iso/characters/lordxc/down2.tim iso/characters/lordxc/down3.tim iso/characters/lordxc/down4.tim iso/characters/lordxc/up0.tim iso/characters/lordxc/up1.tim iso/characters/lordxc/up2.tim iso/characters/lordxc/up3.tim iso/characters/lordxc/up4.tim iso/characters/lordxc/right0.tim iso/characters/lordxc/right1.tim iso/characters/lordxc/right2.tim iso/characters/lordxc/right3.tim iso/characters/lordxc/right4.tim 

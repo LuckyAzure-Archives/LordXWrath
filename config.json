@@ -24,16 +24,36 @@
 			"fnfanim" : "singRIGHT",
 			"imgname" : "right",
 			"hname"   : "Right"
+		},
+		{
+			"fnfanim" : "singLEFTmiss",
+			"imgname" : "leftmiss",
+			"hname"   : "Leftmiss"
+		},
+		{
+			"fnfanim" : "singDOWNmiss",
+			"imgname" : "downmiss",
+			"hname"   : "Downmiss"
+		},
+		{
+			"fnfanim" : "singUPmiss",
+			"imgname" : "upmiss",
+			"hname"   : "Upmiss"
+		},
+		{
+			"fnfanim" : "singRIGHTmiss",
+			"imgname" : "rightmiss",
+			"hname"   : "Rightmiss"
 		}
 	],
-	"input":  "iso/characters/slaves/Tails",
-	"outdir": "iso/characters/slaves/",
-	"charname" : "Tails",
+	"input":  "iso/characters/bfpov/bfperspective",
+	"outdir": "iso/characters/bfpov/",
+	"charname" : "BFPOV",
 	"optimize" : true,
-	"optimizename" : "tails",
+	"optimizename" : "bfpov",
 	"arcname" : "ArcMain",
-	"vrampos" : [448, 256, 0, 481],
-	"bpp" : 8,
+	"vrampos" : [448, 0, 0, 480],
+	"bpp" : 4,
 	"resize" : 0.20,
 	"xmlscale" : 1.0,
 	"padding" : 2,

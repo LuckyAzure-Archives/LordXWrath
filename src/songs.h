@@ -32,12 +32,12 @@
 	},
 	{ //StageId_1_3
 		//Characters
-		{Char_BF_New,    FIXED_DEC(90,1),  FIXED_DEC(110,1)},
+		{Char_BFPOV_New,    FIXED_DEC(90,1),  FIXED_DEC(110,1)},
 		{Char_Slaves_New, FIXED_DEC(-90,1),  FIXED_DEC(110,1)},
 		{NULL,     FIXED_DEC(0,1),  FIXED_DEC(-10,1)},
 		
 		//Stage background
-		Back_Blank_New,
+		Back_Slavess_New,
 		
 		//Song info
 		1, 3,
@@ -157,4 +157,20 @@
 		"Execution",
 		
 		StageId_2_7, STAGE_LOAD_FLAG
+	},
+	{ //StageId_3_1
+		//Characters
+		{Char_BF_New,    FIXED_DEC(110,1),  FIXED_DEC(110,1)},
+		{Char_LordX_New, FIXED_DEC(-110,1),  FIXED_DEC(110,1)},
+		{NULL,     FIXED_DEC(0,1),  FIXED_DEC(-10,1)},
+		
+		//Stage background
+		Back_Default_New,
+		
+		//Song info
+		3, 1,
+		XA_CyclesLegacy, 0,
+		"Cycles Legacy",
+		
+		StageId_2_1, STAGE_LOAD_FLAG
 	}

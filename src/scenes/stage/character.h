@@ -49,6 +49,7 @@ typedef struct Character
 	fixed_t focus_x, focus_y, focus_zoom;
 	
 	fixed_t size;
+	boolean flipped;
 	
 	//Animation state
 	Animatable animatable;
