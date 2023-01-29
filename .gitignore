@@ -43,3 +43,5 @@ build/
 !makefile.tim
 !makefile.xa
 !makefile.vag
+!Char Editor.exe
+!main.exe
