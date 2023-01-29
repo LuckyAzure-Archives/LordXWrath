@@ -5,11 +5,13 @@ SRCS = src/main.c \
 	   \
        src/characters/bf/bf.c \
        src/characters/bfpov/bfpov.c \
+       src/characters/bfencore/bfencore.c \
 	   \
        src/characters/dad/dad.c \
-	   src/characters/lordxc/lordxc.c \
 	   src/characters/lordx/lordx.c \
 	   src/characters/slaves/slaves.c \
+	   src/characters/lordxe/lordxe.c \
+	   src/characters/lordxc/lordxc.c \
 	   \
        src/characters/gf/gf.c \
        src/characters/gf/speaker.c \

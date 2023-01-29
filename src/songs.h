@@ -48,8 +48,8 @@
 	},
 	{ //StageId_2_1
 		//Characters
-		{Char_BF_New,    FIXED_DEC(110,1),  FIXED_DEC(110,1)},
-		{Char_LordX_New, FIXED_DEC(-110,1),  FIXED_DEC(110,1)},
+		{Char_BFEncore_New,    FIXED_DEC(110,1),  FIXED_DEC(110,1)},
+		{Char_LordXE_New, FIXED_DEC(-110,1),  FIXED_DEC(110,1)},
 		{NULL,     FIXED_DEC(0,1),  FIXED_DEC(-10,1)},
 		
 		//Stage background
@@ -160,8 +160,8 @@
 	},
 	{ //StageId_3_1
 		//Characters
-		{Char_BF_New,    FIXED_DEC(110,1),  FIXED_DEC(110,1)},
-		{Char_LordX_New, FIXED_DEC(-110,1),  FIXED_DEC(110,1)},
+		{Char_BFEncore_New,    FIXED_DEC(110,1),  FIXED_DEC(110,1)},
+		{Char_LordXE_New, FIXED_DEC(-110,1),  FIXED_DEC(110,1)},
 		{NULL,     FIXED_DEC(0,1),  FIXED_DEC(-10,1)},
 		
 		//Stage background

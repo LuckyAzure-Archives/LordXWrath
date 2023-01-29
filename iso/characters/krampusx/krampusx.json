@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "X_Idle instance 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				310,
+				-63
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Lord X Right instance 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				117,
+				43
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Lord X Down instance 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				90
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Lord X Up instance 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				40,
+				37
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Lord X Left instance 1",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/KrampusX",
+	"position": [
+		0,
+		-100
+	],
+	"healthicon": "krampusx",
+	"flip_x": false,
+	"healthbar_colors": [
+		60,
+		59,
+		90
+	],
+	"camera_position": [
+		160,
+		80
+	],
+	"sing_duration": 6.1,
+	"scale": 0.95
+}

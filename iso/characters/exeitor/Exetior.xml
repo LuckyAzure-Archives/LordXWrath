@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Exetior.png">
+	<!-- Created with Adobe Animate version 23.0.0.407 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Exetior_Down instance 10000" x="0" y="0" width="402" height="629" frameX="0" frameY="-42" frameWidth="441" frameHeight="671"/>
+	<SubTexture name="Exetior_Down instance 10001" x="402" y="0" width="423" height="651" frameX="0" frameY="-20" frameWidth="441" frameHeight="671"/>
+	<SubTexture name="Exetior_Down instance 10002" x="825" y="0" width="428" height="660" frameX="-1" frameY="-11" frameWidth="441" frameHeight="671"/>
+	<SubTexture name="Exetior_Down instance 10003" x="1253" y="0" width="432" height="666" frameX="-1" frameY="-5" frameWidth="441" frameHeight="671"/>
+	<SubTexture name="Exetior_Down instance 10004" x="1685" y="0" width="435" height="669" frameX="-1" frameY="-2" frameWidth="441" frameHeight="671"/>
+	<SubTexture name="Exetior_Down instance 10005" x="2120" y="0" width="438" height="670" frameX="-1" frameY="-1" frameWidth="441" frameHeight="671"/>
+	<SubTexture name="Exetior_Down instance 10006" x="2558" y="0" width="440" height="671" frameX="-1" frameY="0" frameWidth="441" frameHeight="671"/>
+	<SubTexture name="Exetior_Down instance 10007" x="2998" y="0" width="440" height="671" frameX="-1" frameY="0" frameWidth="441" frameHeight="671"/>
+	<SubTexture name="Exetior_Idle instance 10000" x="3438" y="0" width="571" height="701" frameX="0" frameY="-30" frameWidth="571" frameHeight="731"/>
+	<SubTexture name="Exetior_Idle instance 10001" x="4009" y="0" width="556" height="716" frameX="-6" frameY="-15" frameWidth="571" frameHeight="731"/>
+	<SubTexture name="Exetior_Idle instance 10002" x="4565" y="0" width="550" height="720" frameX="-9" frameY="-11" frameWidth="571" frameHeight="731"/>
+	<SubTexture name="Exetior_Idle instance 10003" x="5115" y="0" width="546" height="723" frameX="-10" frameY="-8" frameWidth="571" frameHeight="731"/>
+	<SubTexture name="Exetior_Idle instance 10004" x="5661" y="0" width="543" height="725" frameX="-11" frameY="-6" frameWidth="571" frameHeight="731"/>
+	<SubTexture name="Exetior_Idle instance 10005" x="6204" y="0" width="540" height="727" frameX="-12" frameY="-4" frameWidth="571" frameHeight="731"/>
+	<SubTexture name="Exetior_Idle instance 10006" x="6744" y="0" width="538" height="729" frameX="-13" frameY="-2" frameWidth="571" frameHeight="731"/>
+	<SubTexture name="Exetior_Idle instance 10007" x="7282" y="0" width="537" height="730" frameX="-13" frameY="-1" frameWidth="571" frameHeight="731"/>
+	<SubTexture name="Exetior_Idle instance 10008" x="0" y="730" width="536" height="731" frameX="-14" frameY="0" frameWidth="571" frameHeight="731"/>
+	<SubTexture name="Exetior_Idle instance 10009" x="536" y="730" width="536" height="731" frameX="-14" frameY="0" frameWidth="571" frameHeight="731"/>
+	<SubTexture name="Exetior_Idle instance 10010" x="536" y="730" width="536" height="731" frameX="-14" frameY="0" frameWidth="571" frameHeight="731"/>
+	<SubTexture name="Exetior_Idle instance 10011" x="536" y="730" width="536" height="731" frameX="-14" frameY="0" frameWidth="571" frameHeight="731"/>
+	<SubTexture name="Exetior_Idle instance 10012" x="536" y="730" width="536" height="731" frameX="-14" frameY="0" frameWidth="571" frameHeight="731"/>
+	<SubTexture name="Exetior_Idle instance 10013" x="1072" y="730" width="536" height="729" frameX="-14" frameY="-2" frameWidth="571" frameHeight="731"/>
+	<SubTexture name="Exetior_Leftt instance 10000" x="1608" y="730" width="591" height="655" frameX="0" frameY="-16" frameWidth="601" frameHeight="671"/>
+	<SubTexture name="Exetior_Leftt instance 10001" x="2199" y="730" width="597" height="663" frameX="0" frameY="-8" frameWidth="601" frameHeight="671"/>
+	<SubTexture name="Exetior_Leftt instance 10002" x="2796" y="730" width="599" height="666" frameX="0" frameY="-5" frameWidth="601" frameHeight="671"/>
+	<SubTexture name="Exetior_Leftt instance 10003" x="3395" y="730" width="600" height="668" frameX="0" frameY="-3" frameWidth="601" frameHeight="671"/>
+	<SubTexture name="Exetior_Leftt instance 10004" x="3995" y="730" width="601" height="669" frameX="0" frameY="-2" frameWidth="601" frameHeight="671"/>
+	<SubTexture name="Exetior_Leftt instance 10005" x="4596" y="730" width="601" height="670" frameX="0" frameY="-1" frameWidth="601" frameHeight="671"/>
+	<SubTexture name="Exetior_Leftt instance 10006" x="5197" y="730" width="601" height="671"/>
+	<SubTexture name="Exetior_Leftt instance 10007" x="5798" y="730" width="601" height="671"/>
+	<SubTexture name="Exetior_Right instance 10000" x="6399" y="730" width="401" height="655" frameX="-3" frameY="-5" frameWidth="404" frameHeight="660"/>
+	<SubTexture name="Exetior_Right instance 10001" x="6800" y="730" width="399" height="659" frameX="-3" frameY="-1" frameWidth="404" frameHeight="660"/>
+	<SubTexture name="Exetior_Right instance 10002" x="7199" y="730" width="399" height="660" frameX="-2" frameY="0" frameWidth="404" frameHeight="660"/>
+	<SubTexture name="Exetior_Right instance 10003" x="7598" y="730" width="399" height="659" frameX="-1" frameY="-1" frameWidth="404" frameHeight="660"/>
+	<SubTexture name="Exetior_Right instance 10004" x="0" y="1461" width="398" height="659" frameX="-1" frameY="-1" frameWidth="404" frameHeight="660"/>
+	<SubTexture name="Exetior_Right instance 10005" x="398" y="1461" width="398" height="659" frameX="0" frameY="-1" frameWidth="404" frameHeight="660"/>
+	<SubTexture name="Exetior_Right instance 10006" x="796" y="1461" width="398" height="659" frameX="0" frameY="-1" frameWidth="404" frameHeight="660"/>
+	<SubTexture name="Exetior_Right instance 10007" x="1194" y="1461" width="398" height="659" frameX="0" frameY="-1" frameWidth="404" frameHeight="660"/>
+	<SubTexture name="Exetior_Up instance 10000" x="1592" y="1461" width="359" height="723" frameX="0" frameY="0" frameWidth="360" frameHeight="723"/>
+	<SubTexture name="Exetior_Up instance 10001" x="1951" y="1461" width="359" height="700" frameX="0" frameY="-23" frameWidth="360" frameHeight="723"/>
+	<SubTexture name="Exetior_Up instance 10002" x="2310" y="1461" width="359" height="689" frameX="0" frameY="-34" frameWidth="360" frameHeight="723"/>
+	<SubTexture name="Exetior_Up instance 10003" x="2669" y="1461" width="360" height="683" frameX="0" frameY="-40" frameWidth="360" frameHeight="723"/>
+	<SubTexture name="Exetior_Up instance 10004" x="3029" y="1461" width="360" height="680" frameX="0" frameY="-43" frameWidth="360" frameHeight="723"/>
+	<SubTexture name="Exetior_Up instance 10005" x="3389" y="1461" width="360" height="679" frameX="0" frameY="-44" frameWidth="360" frameHeight="723"/>
+	<SubTexture name="Exetior_Up instance 10006" x="3749" y="1461" width="360" height="679" frameX="0" frameY="-44" frameWidth="360" frameHeight="723"/>
+	<SubTexture name="Exetior_Up instance 10007" x="4109" y="1461" width="360" height="679" frameX="0" frameY="-44" frameWidth="360" frameHeight="723"/>
+</TextureAtlas>

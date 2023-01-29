@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-310,
+				-350
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Lord X Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-195,
+				-183
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Lord X Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-361,
+				-431
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Lord X Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-276,
+				-203
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Lord X Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-370,
+				-333
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Lord X Right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/DemonX",
+	"position": [
+		-300,
+		-440
+	],
+	"healthicon": "demonx",
+	"flip_x": false,
+	"healthbar_colors": [
+		121,
+		124,
+		183
+	],
+	"camera_position": [
+		310,
+		410
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

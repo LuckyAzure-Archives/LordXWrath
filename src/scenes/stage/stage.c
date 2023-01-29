@@ -2,12 +2,14 @@
 //Players
 #include "../../characters/bf/bf.h"
 #include "../../characters/bfpov/bfpov.h"
+#include "../../characters/bfencore/bfencore.h"
 
 //Opponents
 #include "../../characters/dad/dad.h"
-#include "../../characters/lordxc/lordxc.h"
 #include "../../characters/lordx/lordx.h"
 #include "../../characters/slaves/slaves.h"
+#include "../../characters/lordxe/lordxe.h"
+#include "../../characters/lordxc/lordxc.h"
 
 //Stages
 #include "../../stages/default/default.h"

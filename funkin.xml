@@ -51,10 +51,12 @@
 			<dir name = "char">
 				<file name = "lordxc.arc" type = "data" source = "iso/characters/lordxc/main.arc"/>
 				<file name = "lordx.arc" type = "data" source = "iso/characters/lordx/main.arc"/>
+				<file name = "lordxe.arc" type = "data" source = "iso/characters/lordxe/main.arc"/>
 				<file name = "slaves.arc" type = "data" source = "iso/characters/slaves/main.arc"/>
 				<!-- Boyfriend assets -->
 				<file name = "bf.arc" type = "data" source = "iso/characters/bf/main.arc"/>
 				<file name = "bfpov.arc" type = "data" source = "iso/characters/bfpov/main.arc"/>
+				<file name = "bfencore.arc" type = "data" source = "iso/characters/bfencore/main.arc"/>
 				
 				<!-- Dad assets -->
 				<file name = "dad.arc" type = "data" source = "iso/characters/dad/main.arc"/>

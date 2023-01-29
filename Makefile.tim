@@ -1,10 +1,12 @@
 all: \
 	iso/characters/bf/main.arc \
 	iso/characters/bfpov/main.arc \
+	iso/characters/bfencore/main.arc \
 	\
 	iso/characters/dad/main.arc \
 	iso/characters/lordx/main.arc \
 	iso/characters/lordxc/main.arc \
+	iso/characters/lordxe/main.arc \
 	iso/characters/slaves/main.arc \
 	\
 	iso/characters/gf/main.arc \
@@ -57,3 +59,10 @@ iso/characters/lordx/main.arc: iso/characters/lordx/idle0.tim iso/characters/lor
 
 # Bigfuckingslaves
 iso/characters/slaves/main.arc: iso/characters/slaves/tails0.tim iso/characters/slaves/tails1.tim iso/characters/slaves/tails2.tim iso/characters/slaves/tails3.tim iso/characters/slaves/tails4.tim iso/characters/slaves/tails5.tim iso/characters/slaves/tails6.tim iso/characters/slaves/knuck0.tim iso/characters/slaves/knuck1.tim iso/characters/slaves/knuck2.tim iso/characters/slaves/knuck3.tim iso/characters/slaves/knuck9.tim iso/characters/slaves/knuck10.tim iso/characters/slaves/knuck6.tim iso/characters/slaves/knuck7.tim iso/characters/slaves/knuck8.tim iso/characters/slaves/knuck4.tim iso/characters/slaves/knuck5.tim iso/characters/slaves/eggman0.tim iso/characters/slaves/eggman1.tim iso/characters/slaves/eggman2.tim iso/characters/slaves/eggman3.tim iso/characters/slaves/eggman4.tim iso/characters/slaves/eggman5.tim iso/characters/slaves/eggman6.tim iso/characters/slaves/eggman7.tim iso/characters/slaves/eggman8.tim iso/characters/slaves/eggman9.tim iso/characters/slaves/eggman10.tim iso/characters/slaves/interx0.tim iso/characters/slaves/interx1.tim iso/characters/slaves/interx2.tim iso/characters/slaves/interx3.tim iso/characters/slaves/interx4.tim iso/characters/slaves/interx5.tim iso/characters/slaves/interx6.tim iso/characters/slaves/interx7.tim iso/characters/slaves/interx8.tim iso/characters/slaves/interx9.tim iso/characters/slaves/interx10.tim 
+
+# BFEncore
+iso/characters/bfencore/main.arc: iso/characters/bfencore/bfe0.tim iso/characters/bfencore/bfe1.tim iso/characters/bfencore/bfe2.tim iso/characters/bfencore/bfe3.tim iso/characters/bfencore/bfe4.tim iso/characters/bfencore/bfe5.tim iso/characters/bfencore/bfe6.tim iso/characters/bfencore/bfe7.tim iso/characters/bfencore/bfe8.tim iso/characters/bfencore/bfe9.tim iso/characters/bfencore/bfe12.tim iso/characters/bfencore/bfe10.tim iso/characters/bfencore/bfe11.tim 
+
+# LordXE
+iso/characters/lordxe/main.arc: iso/characters/lordxe/idle0.tim iso/characters/lordxe/idle1.tim iso/characters/lordxe/idle2.tim iso/characters/lordxe/idle3.tim iso/characters/lordxe/idle4.tim iso/characters/lordxe/idle5.tim iso/characters/lordxe/left0.tim iso/characters/lordxe/left1.tim iso/characters/lordxe/left2.tim iso/characters/lordxe/left3.tim iso/characters/lordxe/left4.tim iso/characters/lordxe/down0.tim iso/characters/lordxe/down1.tim iso/characters/lordxe/down2.tim iso/characters/lordxe/down3.tim iso/characters/lordxe/down4.tim iso/characters/lordxe/up0.tim iso/characters/lordxe/up1.tim iso/characters/lordxe/up2.tim iso/characters/lordxe/up3.tim iso/characters/lordxe/up4.tim iso/characters/lordxe/right0.tim iso/characters/lordxe/right1.tim iso/characters/lordxe/right2.tim iso/characters/lordxe/right3.tim iso/characters/lordxe/right4.tim 
+

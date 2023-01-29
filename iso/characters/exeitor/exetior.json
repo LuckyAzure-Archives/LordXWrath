@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				279,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Exetior_Idle instance 1"
+		},
+		{
+			"offsets": [
+				410,
+				-59
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Exetior_Leftt instance 1"
+		},
+		{
+			"offsets": [
+				254,
+				-60
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Exetior_Down instance 1"
+		},
+		{
+			"offsets": [
+				219,
+				24
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Exetior_Up instance 1"
+		},
+		{
+			"offsets": [
+				196,
+				-33
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Exetior_Right instance 1"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Exetior",
+	"position": [
+		310,
+		30
+	],
+	"healthicon": "exetior",
+	"flip_x": false,
+	"healthbar_colors": [
+		25,
+		16,
+		96
+	],
+	"camera_position": [
+		-350,
+		110
+	],
+	"sing_duration": 6.1,
+	"scale": 1.2
+}

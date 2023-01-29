@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Krampus_X.png">
+	<!-- Created with Adobe Animate version 23.0.0.407 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Lord X Down instance 10000" x="0" y="0" width="1126" height="875" frameX="0" frameY="-46" frameWidth="1134" frameHeight="921"/>
+	<SubTexture name="Lord X Down instance 10001" x="3369" y="0" width="1125" height="887" frameX="-2" frameY="-9" frameWidth="1134" frameHeight="921"/>
+	<SubTexture name="Lord X Down instance 10002" x="5621" y="0" width="1129" height="892" frameX="-3" frameY="-2" frameWidth="1134" frameHeight="921"/>
+	<SubTexture name="Lord X Down instance 10003" x="0" y="893" width="1130" height="893" frameX="-4" frameY="0" frameWidth="1134" frameHeight="921"/>
+	<SubTexture name="Lord X Left instance 10000" x="1130" y="893" width="900" height="870" frameX="0" frameY="-11" frameWidth="957" frameHeight="881"/>
+	<SubTexture name="Lord X Left instance 10001" x="3850" y="893" width="919" height="879" frameX="-22" frameY="-2" frameWidth="957" frameHeight="881"/>
+	<SubTexture name="Lord X Left instance 10002" x="5691" y="893" width="925" height="880" frameX="-28" frameY="-1" frameWidth="957" frameHeight="881"/>
+	<SubTexture name="Lord X Left instance 10003" x="0" y="1786" width="926" height="881" frameX="-31" frameY="0" frameWidth="957" frameHeight="881"/>
+	<SubTexture name="Lord X Right instance 10000" x="926" y="1786" width="876" height="777" frameX="-2" frameY="-1" frameWidth="878" frameHeight="778"/>
+	<SubTexture name="Lord X Right instance 10001" x="3536" y="1786" width="862" height="776" frameX="-1" frameY="-1" frameWidth="878" frameHeight="778"/>
+	<SubTexture name="Lord X Right instance 10002" x="5259" y="1786" width="859" height="776" frameX="0" frameY="-2" frameWidth="878" frameHeight="778"/>
+	<SubTexture name="Lord X Right instance 10003" x="6976" y="1786" width="858" height="775" frameX="0" frameY="-3" frameWidth="878" frameHeight="778"/>
+	<SubTexture name="Lord X Up instance 10000" x="0" y="2667" width="648" height="927" frameX="-12" frameY="0" frameWidth="662" frameHeight="927"/>
+	<SubTexture name="Lord X Up instance 10001" x="1954" y="2667" width="657" height="892" frameX="-4" frameY="-35" frameWidth="662" frameHeight="927"/>
+	<SubTexture name="Lord X Up instance 10002" x="3271" y="2667" width="661" height="887" frameX="-1" frameY="-40" frameWidth="662" frameHeight="927"/>
+	<SubTexture name="Lord X Up instance 10003" x="4594" y="2667" width="662" height="886" frameX="0" frameY="-41" frameWidth="662" frameHeight="927"/>
+	<SubTexture name="X_Idle instance 10000" x="5256" y="2667" width="539" height="816" frameX="-13" frameY="-19" frameWidth="552" frameHeight="835"/>
+	<SubTexture name="X_Idle instance 10001" x="6860" y="2667" width="524" height="821" frameX="-13" frameY="-14" frameWidth="552" frameHeight="835"/>
+	<SubTexture name="X_Idle instance 10002" x="513" y="3594" width="513" height="829" frameX="-8" frameY="-6" frameWidth="552" frameHeight="835"/>
+	<SubTexture name="X_Idle instance 10003" x="2063" y="3594" width="521" height="834" frameX="-1" frameY="-1" frameWidth="552" frameHeight="835"/>
+	<SubTexture name="X_Idle instance 10004" x="2584" y="3594" width="522" height="835" frameX="0" frameY="0" frameWidth="552" frameHeight="835"/>
+	<SubTexture name="X_Idle instance 10005" x="2584" y="3594" width="522" height="835" frameX="0" frameY="0" frameWidth="552" frameHeight="835"/>
+	<SubTexture name="X_Idle instance 10006" x="2584" y="3594" width="522" height="835" frameX="0" frameY="0" frameWidth="552" frameHeight="835"/>
+	<SubTexture name="X_Idle instance 10007" x="2584" y="3594" width="522" height="835" frameX="0" frameY="0" frameWidth="552" frameHeight="835"/>
+</TextureAtlas>
