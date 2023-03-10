@@ -488,7 +488,7 @@ void Stage_DrawTexCol(Gfx_Tex *tex, const RECT *src, const RECT_FIXED *dst, fixe
 	fixed_t hz = dst->h;
 	
 	#ifdef STAGE_NOHUD
-		if (tex == &stage.tex_hud0 || tex == &stage.tex_hud1)
+		if (tex == &stage.tex_hud0 || tex == &stage.tex_icons)
 			return;
 	#endif
 	
@@ -520,7 +520,7 @@ void Stage_DrawTexArb(Gfx_Tex *tex, const RECT *src, const POINT_FIXED *p0, cons
 {
 	//Don't draw if HUD and HUD is disabled
 	#ifdef STAGE_NOHUD
-		if (tex == &stage.tex_hud0 || tex == &stage.tex_hud1)
+		if (tex == &stage.tex_hud0 || tex == &stage.tex_icons)
 			return;
 	#endif
 	
@@ -537,7 +537,7 @@ void Stage_BlendTexArb(Gfx_Tex *tex, const RECT *src, const POINT_FIXED *p0, con
 {
 	//Don't draw if HUD and HUD is disabled
 	#ifdef STAGE_NOHUD
-		if (tex == &stage.tex_hud0 || tex == &stage.tex_hud1)
+		if (tex == &stage.tex_hud0 || tex == &stage.tex_icons)
 			return;
 	#endif
 	
@@ -634,7 +634,7 @@ static void Stage_DrawHealth(s16 health, u16 health_i[2][4], s8 ox)
 		dst.y = -dst.y;
 	
 	//Draw health icon
-	Stage_DrawTexRotate(&stage.tex_hud1, &src, &dst, RandomRange(-event.shake,event.shake) / 50, FIXED_MUL(stage.bump, stage.sbump), 0, 0);
+	Stage_DrawTexRotate(&stage.tex_icons, &src, &dst, RandomRange(-event.shake,event.shake) / 50, FIXED_MUL(stage.bump, stage.sbump), 0, 0);
 }
 
 static void Stage_DrawHealthBar(s16 x, s32 color)
@@ -1133,7 +1133,7 @@ void Stage_Load(StageId id, StageDiff difficulty, boolean story)
 
 	//Load HUD textures
 	Gfx_LoadTex(&stage.tex_hud0, IO_Read("\\STAGE\\HUD0.TIM;1"), GFX_LOADTEX_FREE);
-	Gfx_LoadTex(&stage.tex_hud1, IO_Read("\\STAGE\\HUD1.TIM;1"), GFX_LOADTEX_FREE);
+	Gfx_LoadTex(&stage.tex_icons, IO_Read("\\STAGE\\ICONS.TIM;1"), GFX_LOADTEX_FREE);
 	
 	//Load Special Notes
 	Gfx_LoadTex(&stage.tex_note, IO_Read("\\STAGE\\NOTE.TIM;1"), GFX_LOADTEX_FREE);

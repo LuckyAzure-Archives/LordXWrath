@@ -194,7 +194,7 @@ typedef struct
 	FontData font_cdr, font_bold;
 	
 	//HUD textures
-	Gfx_Tex tex_hud0, tex_hud1, tex_note;
+	Gfx_Tex tex_hud0, tex_icons, tex_note;
 	
 	//Stage data
 	const StageDef *stage_def;

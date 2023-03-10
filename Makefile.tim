@@ -1,4 +1,6 @@
 all: \
+	iso/characters/icons.tim \
+	\
 	iso/characters/bf/main.arc \
 	iso/characters/bfpov/main.arc \
 	iso/characters/bfencore/main.arc \
@@ -21,7 +23,6 @@ all: \
 	iso/images/menu/loading.tim \
 	iso/images/font/fonts.tim \
 	iso/images/hud0.tim \
-	iso/characters/icons.tim \
 	iso/images/note.tim \
 
 iso/%.tim: iso/%.png
